@@ -66,6 +66,8 @@ app_license = "MIT"
 # before_install = "secure_customer_app.install.before_install"
 # after_install = "secure_customer_app.install.after_install"
 
+after_install = "secure_customer_app.install.after_install"
+
 # Uninstallation
 # ------------
 
@@ -215,3 +217,9 @@ app_license = "MIT"
 # auth_hooks = [
 #	"secure_customer_app.auth.validate"
 # ]
+
+patches = {
+    'initial': [
+        'secure_customer_app.patches.add_custom_field.execute'
+    ]
+}
