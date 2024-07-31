@@ -5,3 +5,5 @@
 tags
 secure_customer_app/docs/current
 node_modules/
+.vscode/
+secure_customer_app/keys/*

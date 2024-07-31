@@ -128,6 +128,12 @@ after_install = "secure_customer_app.install.after_install"
 #	}
 # }
 
+doc_events = {
+    "Customer": {
+        "before_save": "secure_customer_app.events.customer.before_save"
+    }
+}
+
 # Scheduled Tasks
 # ---------------
 
@@ -217,9 +223,3 @@ after_install = "secure_customer_app.install.after_install"
 # auth_hooks = [
 #	"secure_customer_app.auth.validate"
 # ]
-
-patches = {
-    'initial': [
-        'secure_customer_app.patches.add_custom_field.execute'
-    ]
-}
